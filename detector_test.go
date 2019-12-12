@@ -1,4 +1,4 @@
-package golangdetector
+package langdetector
 
 import "testing"
 

@@ -1,4 +1,4 @@
-package golangdetector
+package langdetector
 
 var languages map[string][]string = map[string][]string{
 	"es": {"ábaco", "abdomen", "abeja", "abierto", "abogado", "abono",

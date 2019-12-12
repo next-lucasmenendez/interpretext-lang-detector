@@ -1,8 +1,8 @@
-// Package golangdetector measures and suggest language according to input
+// Package langdetector measures and suggest language according to input
 // text based on languages dictionary occurrences.
-package golangdetector
+package langdetector
 
-import "github.com/lucasmenendez/gotokenizer"
+import tokenizer "github.com/next-lucasmenendez/interpretext-tokenizer"
 
 const minLength = 140
 
@@ -15,8 +15,8 @@ func Detect(input string) (probs map[string]float64) {
 	}
 
 	var w []string
-	for _, i := range gotokenizer.Sentences(input) {
-		w = append(w, gotokenizer.Words(i)...)
+	for _, i := range tokenizer.Sentences(input) {
+		w = append(w, tokenizer.Words(i)...)
 	}
 
 	if len(w) == 0 {
